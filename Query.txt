@@ -1,0 +1,97 @@
+create schema OHMC;
+
+use OHMC;
+
+-- drop schema ohmc;
+
+
+
+create table OHMC.HISTORY (
+
+contact varchar(12),
+
+name_d varchar(10),
+
+dating varchar(11),
+
+remarks varchar(50)
+
+);
+
+
+
+create table OHMC.PATIENT (
+
+Name_p varchar(10),
+
+Blood varchar(4),
+
+age varchar(3),
+
+sex varchar(7),
+
+Contact varchar(12) PRIMARY KEY,
+
+who varchar(8)
+
+);
+
+
+create table OHMC.USERS(
+
+phone varchar(11) PRIMARY KEY,
+
+passkey varchar(16),
+
+who varchar(10)
+
+);
+
+
+create table OHMC.DOCTOR(
+
+Name_d varchar(10),
+
+Speciality varchar(10),
+age varchar(3),
+
+sex varchar(7),
+
+Contact varchar(12) PRIMARY KEY,
+
+who varchar(8),
+
+Salary varchar(6)
+
+);
+
+
+create table OHMC.APPOINT (
+
+
+name_d varchar(10),
+
+contact_d varchar(12),
+
+name_p varchar(12),
+
+timing varchar(20),
+
+dating varchar(11)
+
+);
+
+
+
+
+
+
+INSERT INTO ohmc.DOCTOR VALUES('ALIA', 'Therapy', '23', 'Male', '03336699331', 'Doctor', '25000');
+
+INSERT INTO ohmc.USERS VALUES('03336699331', '1122', 'doctor');
+
+
+
+
+
+
